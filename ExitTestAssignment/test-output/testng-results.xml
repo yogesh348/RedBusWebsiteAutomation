@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13691" started-at="2021-07-01T19:28:36 IST" finished-at="2021-07-01T19:28:50 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13691" started-at="2021-07-01T19:28:36 IST" finished-at="2021-07-01T19:28:50 IST">
+      <class name="com.selenium.Test.SearchTest">
+        <test-method status="PASS" signature="setExtent()[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed]" name="setExtent" is-config="true" duration-ms="178" started-at="2021-07-01T19:28:36 IST" finished-at="2021-07-01T19:28:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method status="PASS" signature="intializeWebdriver()[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed]" name="intializeWebdriver" is-config="true" duration-ms="3366" started-at="2021-07-01T19:28:36 IST" finished-at="2021-07-01T19:28:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializeWebdriver -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed]" name="openBrowser" is-config="true" duration-ms="2616" started-at="2021-07-01T19:28:40 IST" finished-at="2021-07-01T19:28:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="Blog()[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed]" name="Blog" duration-ms="6706" started-at="2021-07-01T19:28:42 IST" finished-at="2021-07-01T19:28:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Blog -->
+        <test-method status="PASS" signature="attachScreenshot(org.testng.ITestResult)[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed]" name="attachScreenshot" is-config="true" duration-ms="12" started-at="2021-07-01T19:28:49 IST" finished-at="2021-07-01T19:28:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Blog status=SUCCESS method=SearchTest.Blog()[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- attachScreenshot -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed]" name="closeBrowser" is-config="true" duration-ms="930" started-at="2021-07-01T19:28:49 IST" finished-at="2021-07-01T19:28:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.selenium.Test.SearchTest@6fb0d3ed]" name="endReport" is-config="true" duration-ms="797" started-at="2021-07-01T19:28:50 IST" finished-at="2021-07-01T19:28:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.selenium.Test.SearchTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

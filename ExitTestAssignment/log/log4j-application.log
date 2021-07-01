@@ -1,0 +1,35 @@
+2021-07-01 16:40:02,890  INFO [main] BaseTest109 - Open the Chrome Browser
+2021-07-01 16:40:04,310  INFO [main] BusHireTest92 - Select The AirPotType Journey Type
+2021-07-01 16:40:04,351  INFO [main] BusHireTest96 - Click on RedBusHire
+2021-07-01 16:40:05,839  INFO [main] BusHireTest98 - Select The AirPot Journey Type
+2021-07-01 16:40:11,105  INFO [main] BusHireTest100 - Select The City
+2021-07-01 16:40:12,600  INFO [main] BusHireTest102 - Select The Date
+2021-07-01 16:40:15,677  INFO [main] BusHireTest105 - Enter No of Passenger
+2021-07-01 16:40:15,974  INFO [main] BusHireTest107 - Select The Local Journey Type
+2021-07-01 16:40:16,551  INFO [main] BusHireTest112 - Succesfully Move to Next Page
+2021-07-01 16:40:17,511  INFO [main] BaseTest118 - Quite Chrome Browser
+2021-07-01 16:40:17,511  INFO [main] BaseTest119 - -------------------------------------------------------------------------
+2021-07-01 16:40:19,749  INFO [main] BaseTest109 - Open the Chrome Browser
+2021-07-01 16:40:21,555  INFO [main] BusHireTest68 - Select The Local Journey Type
+2021-07-01 16:40:21,558  INFO [main] BusHireTest71 - Click on Red BusHire
+2021-07-01 16:40:26,264  INFO [main] BusHireTest73 - Click on Journey Type
+2021-07-01 16:40:32,471  INFO [main] BusHireTest75 - Enter the Source Location
+2021-07-01 16:40:33,745  INFO [main] BusHireTest77 - Select the Date
+2021-07-01 16:40:34,832  INFO [main] BusHireTest79 - Enter No of passenger
+2021-07-01 16:40:34,973  INFO [main] BusHireTest81 - Click on Proceed
+2021-07-01 16:40:35,242  INFO [main] BusHireTest86 - Succesfully Move to Next Page
+2021-07-01 16:40:36,099  INFO [main] BaseTest118 - Quite Chrome Browser
+2021-07-01 16:40:36,100  INFO [main] BaseTest119 - -------------------------------------------------------------------------
+2021-07-01 16:40:38,302  INFO [main] BaseTest109 - Open the Chrome Browser
+2021-07-01 16:40:40,916  INFO [main] BusHireTest38 - Select The Oustation Journey Type
+2021-07-01 16:40:40,920  INFO [main] BusHireTest41 - Click On BusHire
+2021-07-01 16:40:44,673  INFO [main] BusHireTest43 - Click On Outstation journey
+2021-07-01 16:40:50,519  INFO [main] BusHireTest45 - Enter the Source Location
+2021-07-01 16:40:50,520  INFO [main] BusHireTest46 - Enter the Destination Location
+2021-07-01 16:40:52,556  INFO [main] BusHireTest49 - Click On Date
+2021-07-01 16:40:53,473  INFO [main] BusHireTest51 - Select the Date and press ok
+2021-07-01 16:40:54,431  INFO [main] BusHireTest53 - Enter Max Passenger
+2021-07-01 16:40:54,625  INFO [main] BusHireTest55 - Click On procced
+2021-07-01 16:40:55,100  INFO [main] BusHireTest60 - Successfully move to Next Page
+2021-07-01 16:40:55,952  INFO [main] BaseTest118 - Quite Chrome Browser
+2021-07-01 16:40:55,953  INFO [main] BaseTest119 - -------------------------------------------------------------------------
