@@ -14,12 +14,14 @@ import Utils.ReadExcel;
 public class AwardRecognitionTest extends BaseTest {
 	public final static Logger logger = Logger.getLogger(AwardRecognitionTest.class);
 
+	//-----------Passing Data From Excel---------------
 	@DataProvider(name = "Awardrecognition")
 	public Object[][] HomePageData() throws Exception {
 		Object[][] arrayObject = ReadExcel.ExcelFile(prop.getProperty("ExcelPath"), "Awardrecognition");
 		return arrayObject;
 	}
 
+	//Creating a Method For Adding a Comment in Trusted Brand
 	@Test(dataProvider = "Awardrecognition")
 	public void TrustedBrand(String Comment, String Mail, String Name,String Status) throws InterruptedException {
 		extentTest = extent.startTest("Add Comment to Trusted Brand");
@@ -29,6 +31,7 @@ public class AwardRecognitionTest extends BaseTest {
 		if (Status.equals("Yes")) {
 			Award.ClickBrand();
 			logger.info("Switching the window");
+			//Switching a Window
 			String currentHandle = driver.getWindowHandle();
 			Set<String> handles = driver.getWindowHandles();
 			for (String actual : handles) {

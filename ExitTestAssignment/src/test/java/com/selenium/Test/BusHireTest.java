@@ -13,6 +13,7 @@ import Utils.ReadExcel;
 public class BusHireTest extends BaseTest {
 	public final static Logger logger = Logger.getLogger(BusHireTest.class);
 
+	//-----------Passing Data From Excel---------------
 	@DataProvider(name = "BusHireOutstation")
 	public Object[][] BusHireOutstation() throws Exception {
 		Object[][] arrayObject = ReadExcel.ExcelFile(prop.getProperty("ExcelPath"), "BusHireOutstation");
@@ -31,6 +32,7 @@ public class BusHireTest extends BaseTest {
 		return arrayObject;
 	}
 
+	//Creating a Method For Oustation Journey Type
 	@Test(dataProvider = "BusHireOutstation")
 	public void OutstationType(String Source, String Destination, String NoOfPassenger, String Status)
 			throws InterruptedException {
@@ -47,6 +49,7 @@ public class BusHireTest extends BaseTest {
 			Hire.EnterSource(Source);
 			Hire.EnterDestination(Destination);
 			logger.info("Click On Date");
+			Thread.sleep(5000);//Using a Thread For Finding Element
 			Hire.ClickFromDate();
 			logger.info("Select the Date and press ok");
 			Hire.ClickTillDate();
@@ -62,6 +65,7 @@ public class BusHireTest extends BaseTest {
 
 	}
 
+	//Creating a Method For Local Journey Type
 	@Test(dataProvider = "BusHireLocal")
 	public void LocalType(String Source, String NoOfPassenger,String Status) throws InterruptedException {
 		extentTest = extent.startTest("Woking on Local journey Type");
@@ -75,6 +79,7 @@ public class BusHireTest extends BaseTest {
 			logger.info("Enter the Source Location");
 			Hire.EnterLocalSource(Source);
 			logger.info("Select the Date");
+			Thread.sleep(5000);//Using a Thread For Finding Element
 			Hire.ClickWhenDate();
 			logger.info("Enter No of passenger");
 			Hire.EnterMaxPassenger(NoOfPassenger);
@@ -87,6 +92,7 @@ public class BusHireTest extends BaseTest {
 		}
 	}
 
+	//Creating a Method For AirPot Journey Type
 	@Test(dataProvider = "BusHireAirPot")
 	public void AirPortType(String Source, String NoOfPassenger,String Status) throws InterruptedException {
 		logger.info("Select The AirPotType Journey Type");
@@ -100,7 +106,7 @@ public class BusHireTest extends BaseTest {
 			logger.info("Select The City");
 			Hire.SelectCity(Source);
 			logger.info("Select The Date");
-			Thread.sleep(2000);
+			Thread.sleep(5000);//Using a Thread For Finding Element
 			Hire.EnterDate();
 			logger.info("Enter No of Passenger");
 			Hire.EnterMaxPassenger(NoOfPassenger);

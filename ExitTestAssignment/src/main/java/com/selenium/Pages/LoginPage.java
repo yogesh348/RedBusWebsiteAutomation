@@ -18,55 +18,72 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-	// Here we are declaring the locator for each test cases
+	//--------------------------Here we are declaring the locator for each test cases-------------------------
 	@FindBy(how = How.XPATH, using = "//i[@id='i-icon-profile']")
 	public WebElement Profile;
-
-	public void UserProfile() {
-		Profile.click();
-	}
 
 	@FindBy(how = How.ID, using = "signInLink")
 	public WebElement SignIn;
 
+	@FindBy(how = How.CLASS_NAME, using = "IP")
+	public WebElement MobileNo;
+
+	@FindBy(how = How.ID, using = "selectedPhCode")
+	public WebElement Phncode;
+
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'United States')]")
+	public WebElement Code;
+
+	@FindBy(how = How.ID, using = "g_id_onload")
+	public WebElement SignInGoogle;
+
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Next')]")
+	public WebElement Next;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"identifierId\"]")
+	public WebElement UserName;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"password\"]/div[1]/div/div[1]/input")
+	public WebElement Password;
+
+	@FindBy(how = How.XPATH, using = "//i[@class='icon-close']")
+	public WebElement closeIcon;
+
+	//Method for Click on UserProfile
+	public void UserProfile() {
+		Profile.click();
+	}
+
+	//Method for Click on SignIn Button
 	public void ClickSignIn() {
 		SignIn.click();
 	}
 
-	@FindBy(how = How.CLASS_NAME, using = "IP")
-	public WebElement MobileNo;
-
+	//Method for Enter Mobile No
 	public void InputNo(String Number) {
 		MobileNo.sendKeys(Number);
 	}
 
-	@FindBy(how = How.ID, using = "selectedPhCode")
-	public WebElement Phncode;
-	@FindBy(how = How.XPATH, using = "//div[contains(text(),'United States')]")
-	public WebElement Code;
-
+	//Method for Select the PinCode
 	public void SeletePhCode() {
 		Phncode.click();
 		Code.click();
 	}
 
+	//Method for Switching the Frame
 	public void Switch() {
 		WebElement framet = driver.findElement(By.className("modalIframe"));
 		driver.switchTo().frame(framet);
 	}
 
-	@FindBy(how = How.ID, using = "g_id_onload")
-	public WebElement SignInGoogle;
-
+	//Method for Click SignIn
 	public void ClickSignin() {
-		WebElement waitElement1 = (new WebDriverWait(driver, 20)).until(
-				ExpectedConditions.presenceOfElementLocated(By.id("g_id_onload")));
+		WebElement waitElement1 = (new WebDriverWait(driver, 20))
+				.until(ExpectedConditions.presenceOfElementLocated(By.id("g_id_onload")));
 		SignInGoogle.click();
 	}
 
-	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Next')]")
-	public WebElement Next;
-
+	//Method for Click Next Button
 	public void ClickNext() {
 		Next.click();
 	}
@@ -74,27 +91,22 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"passwordNext\"]/div/button/span")
 	public WebElement PassNext;
 
+	//Method for Next Button
 	public void ClickNextPas() {
 		PassNext.click();
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"identifierId\"]")
-	public WebElement UserName;
-
+	//Method for Enter UserName
 	public void EnterUserName(String Name) {
 		UserName.sendKeys(Name);
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"password\"]/div[1]/div/div[1]/input")
-	public WebElement Password;
-
+	//Method for Enter Password
 	public void EnterPassword(String Pass) {
 		Password.sendKeys(Pass);
 	}
 
-	@FindBy(how = How.XPATH, using = "//i[@class='icon-close']")
-	public WebElement closeIcon;
-
+	//Method for Click Close
 	public void ClickClose() {
 		closeIcon.click();
 	}

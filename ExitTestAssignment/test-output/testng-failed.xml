@@ -8,7 +8,7 @@
           <include name="attachScreenshot"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
-          <include name="Blog"/>
+          <include name="InvalidSearchBus" invocation-numbers="0"/>
           <include name="endReport"/>
           <include name="setExtent"/>
           <include name="intializeWebdriver"/>

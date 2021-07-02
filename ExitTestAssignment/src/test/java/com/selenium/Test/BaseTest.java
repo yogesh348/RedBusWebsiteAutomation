@@ -50,11 +50,13 @@ public class BaseTest {
 		}
 	}
 
+	//Method For Creating Extent Report
 	@BeforeSuite
 	public void setExtent() {
 		extent = new ExtentReports(".\\Reports\\ExtentReport.html");
 	}
 
+	//Method For Taking A ScreenShot
 	@AfterMethod
 	public void attachScreenshot(ITestResult result) {
 
@@ -76,6 +78,7 @@ public class BaseTest {
 		extent.close();
 	}
 
+	//Initializing the Browser
 	@BeforeMethod
 	public static void intializeWebdriver() {
 		if (prop.getProperty("browserName").equalsIgnoreCase("chrome")) {
@@ -83,11 +86,13 @@ public class BaseTest {
 			System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
 			boolean isHeadlessMode = Boolean.parseBoolean(prop.getProperty("headless"));
 			if (isHeadlessMode) {
-				// To open Chrome Driver in Headless mode
-				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless");
-				driver = new ChromeDriver(options);
-
+				// To open Chrome Driver in Headless mode	            
+		            ChromeOptions options = new ChromeOptions();
+		            options.addArguments("--headless");
+		            options.addArguments("window-size=1920,1080");
+		            options.addArguments("user-agent=whatever you want");		            
+		            driver = new ChromeDriver(options);
+		            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		             
 			} else {
 				driver = new ChromeDriver(); // To open Chrome Driver
 			}
@@ -104,14 +109,16 @@ public class BaseTest {
 				TimeUnit.SECONDS);
 	}
 
+	//Method For Opening Chrome Browser
 	@BeforeMethod
 	public static void openBrowser() {
-		logger.info("Open the Chrome Browser");
+		logger.info("Launching Chrome Browser");
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 
 	}
 
+	//Closing a Browser
 	@AfterMethod
 	public static void closeBrowser() {
 		driver.quit();

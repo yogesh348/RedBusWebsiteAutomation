@@ -10,6 +10,7 @@ import com.selenium.Pages.RPollPage;
 public class RPollTest extends BaseTest {
 	public final static Logger logger = Logger.getLogger(RPollTest.class);
 
+	//Method For Playing YouTube Video in RPoll
 	@Test
 	public void Play() throws InterruptedException {
 		extentTest = extent.startTest("Playing video in RpollPage");
@@ -24,6 +25,7 @@ public class RPollTest extends BaseTest {
 		logger.info("Successfully Play the Video");
 	}
 
+	//Method For Switching Slide Bar in RPoll
 	@Test
 	public void Switch() throws InterruptedException {
 		extentTest = extent.startTest("Switch the sliding Bar");

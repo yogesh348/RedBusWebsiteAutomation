@@ -15,12 +15,14 @@ import Utils.ReadExcel;
 public class HomeTest extends BaseTest {
 	public final static Logger logger = Logger.getLogger(HomeTest.class);
 
+	//-----------Passing Data From Excel---------------
 	@DataProvider(name = "ManageBooking")
 	public Object[][] HomePageData() throws Exception {
 		Object[][] arrayObject = ReadExcel.ExcelFile(prop.getProperty("ExcelPath"), "ManageBooking");
 		return arrayObject;
 	}
 
+	//Method for Change the Country
 	@Test
 	public void changeCountry() throws InterruptedException {
 		extentTest = extent.startTest("Open the Contact us Page And Click On Help&Support");
@@ -28,9 +30,10 @@ public class HomeTest extends BaseTest {
 		logger.info("Select a Country");
 		logger.info("New Window Open with That Redbus Site");
 		Page.ChooseCountry();
+		//Switching a Window
 		String currentHandle = driver.getWindowHandle();
-		Set<String> handles = driver.getWindowHandles();
-		for (String actual : handles) {
+		Set<String> handless = driver.getWindowHandles();
+		for (String actual : handless) {
 			if (!actual.equalsIgnoreCase(currentHandle)) {
 				driver.switchTo().window(actual);
 				logger.info("Window Switch Successfully");
@@ -43,6 +46,7 @@ public class HomeTest extends BaseTest {
 
 	}
 
+	//Creating a Method For Invalid ManageBooking
 	@Test(dataProvider = "ManageBooking")
 	public void InvalidManageBooking(String TicketNumber, String Email, String Status) {
 		HomePage Page = new HomePage(driver);
@@ -60,9 +64,12 @@ public class HomeTest extends BaseTest {
 			logger.info("Click Submit");
 			Page.ClickSubmit();
 			logger.info("Assertion error");
+			Assert.assertEquals(driver.findElement(By.xpath("//span[@id='nf_error']")).getText(),
+					"Something went wrong, please try again later");
 		}
 	}
-	
+
+	//Creating a Method For RPoll Help to Chat with ChatBot
 	@Test
 	public void RPollHelp() throws InterruptedException {
 		extentTest = extent.startTest("Wokring in RpollHelp");
@@ -90,6 +97,7 @@ public class HomeTest extends BaseTest {
 		logger.info("Closing the Help Page");
 	}
 
+	//Method For Contact Page
 	@Test
 	public void ContactUs() throws InterruptedException {
 		extentTest = extent.startTest("Open the Contact us Page And Click On Help&Support");
@@ -97,6 +105,7 @@ public class HomeTest extends BaseTest {
 		logger.info("Click On contact us Page");
 		logger.info("Click on Help&Support");
 		contact.ClickContactUs();
+		//Switching a Window
 		String currentHandle = driver.getWindowHandle();
 		Set<String> handless = driver.getWindowHandles();
 		for (String actual : handless) {

@@ -15,6 +15,8 @@ import Utils.ReadExcel;
 public class RedBusCareTest extends BaseTest {
 	public final static Logger logger = Logger.getLogger(RedBusCareTest.class);
 
+
+	//-----------Passing Data From Excel---------------
 	@DataProvider(name = "CareFund")
 	public Object[][] CarePageData() throws Exception {
 		Object[][] arrayObject = ReadExcel.ExcelFile(
@@ -23,6 +25,7 @@ public class RedBusCareTest extends BaseTest {
 		return arrayObject;
 	}
 
+	//Method for RedBus Cares
 	@Test(dataProvider = "CareFund")
 	public void RedBusCare(String Name, String Email, String PhoneNo, String Status) throws InterruptedException {
 		extentTest = extent.startTest("RedBus Care Page ");
@@ -31,6 +34,7 @@ public class RedBusCareTest extends BaseTest {
 		if (Status.equals("Yes")) {
 			logger.info("Clicking on RedBus Care");
 			Care.ClickCare();
+			//Switching a Window
 			logger.info("Switching to Actual Window");
 			String currentParent = driver.getWindowHandle();
 			Set<String> next_tab = driver.getWindowHandles();

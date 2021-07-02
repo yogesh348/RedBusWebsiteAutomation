@@ -14,12 +14,14 @@ import Utils.ReadExcel;
 public class OperatorTest extends BaseTest {
 	public final static Logger logger = Logger.getLogger(OperatorTest.class);
 
+	//-----------Passing Data From Excel---------------
 	@DataProvider(name = "TopOperator")
 	public Object[][] OperatorPageData() throws Exception {
 		Object[][] arrayObject = ReadExcel.ExcelFile(prop.getProperty("ExcelPath"), "TopOperator");
 		return arrayObject;
 	}
 
+	//Method for Searching Bus Based On Top Operator
 	@Test(dataProvider = "TopOperator")
 	public void TopOperator(String Source, String Destination, String Status) throws InterruptedException {
 		extentTest = extent.startTest("SearchBus Based on Top Operator");
@@ -41,6 +43,7 @@ public class OperatorTest extends BaseTest {
 		}
 	}
 
+	//Method for Switching Operator Directories
 	@Test
 	public void SwitchOperatorDirectories() {
 		extentTest = extent.startTest("Switching Operator Directory");
@@ -48,6 +51,7 @@ public class OperatorTest extends BaseTest {
 		logger.info("Click on AllOperator");
 		op.ClickAllOperator();
 		logger.info("Switching to AcutalHandel");
+		//switching a Window
 		String currentHandle = driver.getWindowHandle();
 		Set<String> handles = driver.getWindowHandles();
 		for (String actual : handles) {

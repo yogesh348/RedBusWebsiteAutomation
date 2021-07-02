@@ -12,22 +12,21 @@ import Utils.ReadExcel;
 public class SearchTest extends BaseTest {
 	public final static Logger logger = Logger.getLogger(SearchTest.class);
 
+
+	//-----------Passing Data From Excel---------------
 	@DataProvider(name = "SearchBus")
 	public Object[][] validSearchBus() throws Exception {
-		Object[][] arrayObject = ReadExcel.ExcelFile(
-				prop.getProperty("ExcelPath"),
-				"SearchBus");
+		Object[][] arrayObject = ReadExcel.ExcelFile(prop.getProperty("ExcelPath"), "SearchBus");
 		return arrayObject;
 	}
 
 	@DataProvider(name = "InvalidSearchBus")
 	public Object[][] InvalidSearchBus() throws Exception {
-		Object[][] arrayObject = ReadExcel.ExcelFile(
-				prop.getProperty("ExcelPath"),
-				"InvalidSearchBus");
+		Object[][] arrayObject = ReadExcel.ExcelFile(prop.getProperty("ExcelPath"), "InvalidSearchBus");
 		return arrayObject;
 	}
 
+	//Method for Find the Buses
 	@Test(dataProvider = "SearchBus")
 	public void SearchBus(String City1, String City2, String Status) throws InterruptedException {
 		extentTest = extent.startTest("Searching the Bus Based on Location");
@@ -46,6 +45,7 @@ public class SearchTest extends BaseTest {
 		}
 	}
 
+	//Method for InValid Search Bus
 	@Test(dataProvider = "InvalidSearchBus")
 	public void InvalidSearchBus(String City1, String City2, String Status) throws InterruptedException {
 		extentTest = extent.startTest("SearchBus with InValid Credentials");
@@ -63,6 +63,7 @@ public class SearchTest extends BaseTest {
 		}
 	}
 
+	//Method for Search Blog
 	@Test
 	public void Blog() throws InterruptedException {
 		extentTest = extent.startTest("Searching Detail");
@@ -75,6 +76,7 @@ public class SearchTest extends BaseTest {
 		logger.info("SuccessFully Search ");
 	}
 
+	//Method for Change the ToggleBar
 	@Test(dataProvider = "SearchBus")
 	public void ChangeTogglebar(String City1, String City2, String Status) throws InterruptedException {
 		extentTest = extent.startTest("Switching the ToggleBar");
@@ -95,6 +97,7 @@ public class SearchTest extends BaseTest {
 		}
 	}
 
+	//Method for Modify the SearchBus
 	@Test(dataProvider = "SearchBus")
 	public void Modifyresult(String City1, String City2, String Status) throws InterruptedException {
 		extentTest = extent.startTest("Modify the Result of SearchBus");

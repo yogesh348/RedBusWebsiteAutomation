@@ -17,41 +17,23 @@ public class OperatorPage {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
-
+	
+	//-----------------Here we are declaring the locator for test cases------------------------
 	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Bengal Tiger')]")
 	public WebElement TopOperator;
-
-	public void ClickOperator() {
-		WebElement waitElement1 = (new WebDriverWait(driver, 10))
-				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),'Bengal Tiger')]")));
-		TopOperator.click();
-	}
-
+	
 	@FindBy(how = How.XPATH, using = "//input[@id='txtSource']")
 	public WebElement Source;
+	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"C120_suggestion-wrap\"]/li[1]/strong")
 	public WebElement SelectSource;
-
-	public void EnterSource(String Src) {
-		Source.sendKeys(Src);
-//		WebElement waitElement1 = (new WebDriverWait(driver, 10))
-//				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='txtSource']")));
-
-		SelectSource.click();
-	}
-
+	
 	@FindBy(how = How.XPATH, using = "//input[@id='txtDestination']")
 	public WebElement Destination;
+	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"C120_suggestion-wrap\"]/li[5]/strong")
 	public WebElement SelectDestination;
-
-	public void EnterDestination(String Dest) {
-		Destination.sendKeys(Dest);
-		WebElement waitElement1 = (new WebDriverWait(driver, 10))
-				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='txtDestination']")));
-		SelectDestination.click();
-	}
-
+	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"rb-calmiddle\"]/ul[2]/li[26]")
 	public WebElement Date;
 
@@ -69,27 +51,50 @@ public class OperatorPage {
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"rb-calmiddle\"]/ul[2]/li[33]/span")
 	public WebElement dateNumber;
+	
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'All Operators >')]")
+	public WebElement AllOperator;
+	
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'2')]")
+	public WebElement Alphabet;
+
+	public void ClickOperator() {
+		WebElement waitElement1 = (new WebDriverWait(driver, 10))
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),'Bengal Tiger')]")));
+		TopOperator.click();
+	}
+
+	public void EnterSource(String Src) {
+		Source.sendKeys(Src);
+//		WebElement waitElement1 = (new WebDriverWait(driver, 10))
+//				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='txtSource']")));
+
+		SelectSource.click();
+	}
+
+	public void EnterDestination(String Dest) {
+		Destination.sendKeys(Dest);
+		WebElement waitElement1 = (new WebDriverWait(driver, 10))
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='txtDestination']")));
+		SelectDestination.click();
+	}
+
 
 	public void clickDate() {
 		dateOperator.click();
 		dateNumber.click();
-		
+
 	}
 
 	public void ClickSearch() {
 		SearchButton.click();
 	}
-	
-	@FindBy(how=How.XPATH,using="//a[contains(text(),'All Operators >')]")
-	public WebElement AllOperator;
-	
+
 	public void ClickAllOperator() {
 		AllOperator.click();
 	}
-	
-	@FindBy(how=How.XPATH,using="//a[contains(text(),'2')]")
-	public WebElement Alphabet;
-	
+
+
 	public void SwitchPage() {
 		Alphabet.click();
 	}
