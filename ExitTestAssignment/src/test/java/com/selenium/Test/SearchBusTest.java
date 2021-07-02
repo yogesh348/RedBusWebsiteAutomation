@@ -9,8 +9,8 @@ import com.selenium.Pages.SearchBusPage;
 
 import Utils.ReadExcel;
 
-public class SearchTest extends BaseTest {
-	public final static Logger logger = Logger.getLogger(SearchTest.class);
+public class SearchBusTest extends BaseTest {
+	public final static Logger logger = Logger.getLogger(SearchBusTest.class);
 
 
 	//-----------Passing Data From Excel---------------
