@@ -97,7 +97,7 @@ public class SearchTest extends BaseTest {
 		}
 	}
 
-	//Method for Modify the SearchBus
+	//Method for Modifying  the SearchBus by Switching Location
 	@Test(dataProvider = "SearchBus")
 	public void Modifyresult(String City1, String City2, String Status) throws InterruptedException {
 		extentTest = extent.startTest("Modify the Result of SearchBus");
