@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -101,7 +102,18 @@ public class BaseTest {
 			driver = new EdgeDriver(); // To open Edge Driver
 		} else if (prop.getProperty("browserName").equalsIgnoreCase("gecko")) {
 			System.setProperty("webdriver.gecko.driver", ".\\Driver\\geckodriver.exe");
-			driver = new FirefoxDriver(); // To open FireFox Driver
+			boolean isHeadlessMode = Boolean.parseBoolean(prop.getProperty("headless"));
+			if (isHeadlessMode) {
+				// To open Chrome Driver in Headless mode	            
+		            FirefoxOptions options = new FirefoxOptions();
+		            options.addArguments("--headless");
+		            options.addArguments("window-size=1920,1080");
+		            options.addArguments("user-agent=whatever you want");		            
+		            driver = new FirefoxDriver(options);
+		            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		             
+			} else {
+				driver = new FirefoxDriver(); // To open Chrome Driver
+			}
 		}
 
 		// Implicit Wait

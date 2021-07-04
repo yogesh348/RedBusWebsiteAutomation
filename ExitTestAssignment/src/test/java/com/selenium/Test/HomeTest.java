@@ -111,9 +111,9 @@ public class HomeTest extends BaseTest {
 		for (String actual : handless) {
 			if (actual.equalsIgnoreCase(currentHandle)) {
 				driver.switchTo().window(actual);
-
 			}
 		}
+		Assert.assertEquals(driver.getTitle(),"Customer Support, 24X7 Customer Service -redBus.in");
 		logger.info("Closing Contact us Page");
 	}
 }

@@ -23,6 +23,7 @@ public class RPollTest extends BaseTest {
 		logger.info("Click on Youtube Video");
 		Roll.ClickPlay();
 		logger.info("Successfully Play the Video");
+		
 	}
 
 	//Method For Switching Slide Bar in RPoll
