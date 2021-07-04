@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.Test.LoginTest">
+      <class name="com.selenium.Test.SearchBusTest">
         <methods>
           <include name="attachScreenshot"/>
-          <include name="ValidLogin" invocation-numbers="0"/>
+          <include name="Modifyresult" invocation-numbers="0"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
           <include name="endReport"/>
           <include name="setExtent"/>
           <include name="intializeWebdriver"/>
         </methods>
-      </class> <!-- com.selenium.Test.LoginTest -->
+      </class> <!-- com.selenium.Test.SearchBusTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
