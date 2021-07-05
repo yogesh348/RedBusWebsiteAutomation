@@ -16,7 +16,7 @@ public class RedBusCarePage {
 	}
 
 	// -----------------------Here we are declaring the locator for each test cases-----------------------
-	@FindBy(how = How.XPATH, using = "//*[@id=\"offer_container\"]/li[3]/span/span[2]/img")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"offer_container\"]/li[2]/span")
 	public WebElement Care;
 
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'200')]")

@@ -3,17 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.selenium.Test.BusHireTest">
-        <methods>
-          <include name="attachScreenshot"/>
-          <include name="AirPortType" invocation-numbers="0"/>
-          <include name="closeBrowser"/>
-          <include name="openBrowser"/>
-          <include name="endReport"/>
-          <include name="setExtent"/>
-          <include name="intializeWebdriver"/>
-        </methods>
-      </class> <!-- com.selenium.Test.BusHireTest -->
       <class name="com.selenium.Test.SearchBusTest">
         <methods>
           <include name="attachScreenshot"/>
@@ -47,17 +36,6 @@
           <include name="intializeWebdriver"/>
         </methods>
       </class> <!-- com.selenium.Test.LoginTest -->
-      <class name="com.selenium.Test.RedBusCareTest">
-        <methods>
-          <include name="attachScreenshot"/>
-          <include name="RedBusCare" invocation-numbers="0"/>
-          <include name="closeBrowser"/>
-          <include name="openBrowser"/>
-          <include name="endReport"/>
-          <include name="setExtent"/>
-          <include name="intializeWebdriver"/>
-        </methods>
-      </class> <!-- com.selenium.Test.RedBusCareTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
