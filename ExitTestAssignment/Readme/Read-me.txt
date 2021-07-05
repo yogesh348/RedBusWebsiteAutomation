@@ -1,0 +1,49 @@
+##Selenium Assignment Suite Information
+
+###To run the Assignment Automation Suite from command line in the project folder
+
+## Packages Description
+-Pages: Defining all the pages actions and the respective object And define the locator for each Element
+-testcases: Defining all the pages test and Apply assertion on it
+-Utils:  Defining all the utilities needed for the tests
+
+**test_LoginPage**: includes test
+-to verify the User With validLogin and invalidLogin user details
+
+**test_AwardRecognition**: includes test
+-Adding a Comment in Most Trusted Brand
+
+**test_BusHire**: includes test
+-In this we are Searching the Journey Type that include 
+-Outstation Journey Type
+-Local Journey Type
+-AirPot Journey Type
+
+**test_HomePage**: includes test
+-Change the Website from .in to .co
+-To verify Manage Booking Based On invalid Detail
+-Performing Some Action on ChatBot in Rpoll Help
+-Performing Some Action on Contact Us
+
+**test_Operator**: includes test
+-Searching the Bus Based On Top Operator
+-Switching the directories of Top Operator
+
+**test_RedBusCarePage**: includes test
+-Performing Some Action On Funding Pade in RedBus
+
+
+**test_RPollPage**: includes test
+-Playing a Youtube video in rPoll
+-Switching the Silde Bar 
+
+**test_SearchBusPage**: includes test
+-Search Bus Based On Valid Detail
+-Change the ToggleBar of Search Bus
+-Search the Blog
+-Modify the SearchBus
+-Search the Bus Based On Invalid Detail
+
+
+***In this i am using thread to identify Element beacuse Implicit and Explicit wait is not Working*** 
+***While Running on Headless Mode Many Test Cases are Failing But While Running individual its Running Fine..***
