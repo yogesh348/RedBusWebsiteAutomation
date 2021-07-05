@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
-  <test thread-count="5" name="Test(failed)" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="com.selenium.Test.BusHireTest">
         <methods>
-          <include name="LocalType" invocation-numbers="0"/>
           <include name="attachScreenshot"/>
-          <include name="OutstationType" invocation-numbers="0"/>
           <include name="AirPortType" invocation-numbers="0"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
@@ -19,12 +17,8 @@
       <class name="com.selenium.Test.SearchBusTest">
         <methods>
           <include name="attachScreenshot"/>
-          <include name="Modifyresult" invocation-numbers="0"/>
-          <include name="ChangeTogglebar" invocation-numbers="0"/>
-          <include name="SearchBus" invocation-numbers="0"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
-          <include name="Blog"/>
           <include name="InvalidSearchBus" invocation-numbers="0"/>
           <include name="endReport"/>
           <include name="setExtent"/>
@@ -39,15 +33,12 @@
           <include name="openBrowser"/>
           <include name="endReport"/>
           <include name="setExtent"/>
-          <include name="ContactUs"/>
-          <include name="RPollHelp"/>
           <include name="intializeWebdriver"/>
         </methods>
       </class> <!-- com.selenium.Test.HomeTest -->
       <class name="com.selenium.Test.LoginTest">
         <methods>
           <include name="attachScreenshot"/>
-          <include name="ValidLogin" invocation-numbers="0"/>
           <include name="IN_ValidLogin" invocation-numbers="0"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
@@ -56,17 +47,6 @@
           <include name="intializeWebdriver"/>
         </methods>
       </class> <!-- com.selenium.Test.LoginTest -->
-      <class name="com.selenium.Test.OperatorTest">
-        <methods>
-          <include name="attachScreenshot"/>
-          <include name="TopOperator" invocation-numbers="0"/>
-          <include name="closeBrowser"/>
-          <include name="openBrowser"/>
-          <include name="endReport"/>
-          <include name="setExtent"/>
-          <include name="intializeWebdriver"/>
-        </methods>
-      </class> <!-- com.selenium.Test.OperatorTest -->
       <class name="com.selenium.Test.RedBusCareTest">
         <methods>
           <include name="attachScreenshot"/>
