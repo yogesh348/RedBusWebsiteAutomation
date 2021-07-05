@@ -45,5 +45,7 @@
 -Search the Bus Based On Invalid Detail
 
 
+***For Running Docker in Testng we have to declare the Parallel Classes in Suit And In Config Declare dockerContainer and set Browser
+and Set Docker=Docker and If you want to run it Normally Remove All Above thing to run Normally***
 ***In this i am using thread to identify Element beacuse Implicit and Explicit wait is not Working*** 
 ***While Running on Headless Mode Many Test Cases are Failing But While Running individual its Running Fine..***
